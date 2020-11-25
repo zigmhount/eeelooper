@@ -1,0 +1,37 @@
+# Configuration file to load samples into Zig's load_preset_sampler.pd PureData patch, typically for drums played by the MPK mini's pads.
+#
+# The MPK's standard setup on program 1:
+#
+# Bank A:
+# Pad 5: 36    Pad 6:    Pad 7:    Pad 8:
+# Pad 1: 40    Pad 2:    Pad 3:    Pad 4:
+#
+# Bank B:
+# Pad 5: 44    Pad 6:    Pad 7:    Pad 8:
+# Pad 1: 48    Pad 2:    Pad 3:    Pad 4: 51
+#
+# Add an option to override with a noteoff, or with another note (e.g. open HH is shut by closed HH)?
+#
+# button_number /path/to/sample.wav output_1 output_2 stopnote
+# stopnote = note that will stop the playing one
+#;
+
+36 /home/zig/sounds/fabla808.lv2/Classic-808_Kick_long.wav 1 1 37;
+37 /home/zig/sounds/fabla808.lv2/Classic-808_Kick_short.wav 1 1;
+38 /home/zig/sounds/fabla808.lv2/Classic-808_Clap.wav 2 2;
+39 /home/zig/sounds/fabla808.lv2/Classic-808_Clave.wav 2 2;
+40 /home/zig/sounds/fabla808.lv2/Classic-808_Cowbell.wav 3 3;
+41 /home/zig/sounds/fabla808.lv2/Classic-808_Cymbal-high.wav 4 4;
+42 /home/zig/sounds/fabla808.lv2/Classic-808_Hat_closed.wav 4 4;
+43 /home/zig/sounds/fabla808.lv2/Classic-808_Hat_long.wav 4 4 42;
+44 /home/zig/sounds/fabla808.lv2/Classic-808_Hi_Conga.wav 5 5;
+45 /home/zig/sounds/fabla808.lv2/Classic-808_Hi_Tom.wav 5 5;
+46 /home/zig/sounds/fabla808.lv2/Classic-808_Lo_Conga.wav 5 5;
+47 /home/zig/sounds/fabla808.lv2/Classic-808_Lo_Tom.wav 5 5;
+48 /home/zig/sounds/fabla808.lv2/Classic-808_Maracas.wav 6 6;
+49 /home/zig/sounds/fabla808.lv2/Classic-808_Md_Conga.wav 5 5;
+50 /home/zig/sounds/fabla808.lv2/Classic-808_Md_Tom.wav 5 5;
+51 /home/zig/sounds/fabla808.lv2/Classic-808_Rim_Shot.wav 3 3;
+# 52 /home/zig/sounds/fabla808.lv2/Classic-808_Snare_lo1.wav 6 6;
+# 53 /home/zig/sounds/fabla808.lv2/Classic-808_Snare_lo2.wav 6 6;
+# 54 /home/zig/sounds/fabla808.lv2/Classic-808_Snare_lo3.wav 6 6;
