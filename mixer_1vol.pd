@@ -1,11 +1,11 @@
-#N canvas 322 117 450 300 10;
+#N canvas 4 87 450 300 10;
 #X obj 238 182 *~;
-#X obj 101 32 vsl 15 37 1 127 0 0 \$0-slider-s \$0-slider-r empty 0
+#X obj 101 32 vsl 15 37 1 127 0 1 \$0-slider-s \$0-slider-r empty 0
 -9 0 10 -262144 -1 -1 0 0;
 #X obj 35 26 loadbang;
 #X obj 66 247 outlet;
 #X obj 129 3 inlet;
-#X obj 101 70 tgl 15 0 empty empty M 5 7 0 10 -262144 -258113 -1 1
+#X obj 101 70 tgl 15 1 empty empty M 5 7 0 10 -262144 -258113 -1 1
 1;
 #X obj 71 198 == 0;
 #X obj 109 220 switch~;
@@ -18,9 +18,17 @@
 #X obj 253 148 line~;
 #X obj 129 26 route float bang;
 #X obj 101 82 monitor_small;
+#X obj 31 122 f 1;
+#X obj 31 99 select 1 2;
+#X obj 31 153 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 64 156 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 65 128 0;
 #X connect 0 0 11 0;
 #X connect 0 0 16 0;
 #X connect 1 0 9 0;
+#X connect 1 0 18 0;
 #X connect 2 0 12 0;
 #X connect 4 0 15 0;
 #X connect 5 0 6 0;
@@ -34,4 +42,10 @@
 #X connect 14 0 0 1;
 #X connect 15 0 1 0;
 #X connect 15 1 5 0;
+#X connect 17 0 19 0;
+#X connect 17 0 5 0;
+#X connect 18 0 17 0;
+#X connect 18 2 21 0;
+#X connect 21 0 20 0;
+#X connect 21 0 5 0;
 #X coords 0 -1 1 1 15 60 2 101 30;

@@ -1,0 +1,69 @@
+#N canvas 269 99 395 368 10;
+#X obj 86 125 f 0;
+#X obj 59 317 s beatnum8;
+#X obj 220 132 metro 500;
+#X obj 59 242 f;
+#X obj 59 266 mod 8;
+#X floatatom 59 288 5 0 0 0 - - -;
+#X obj 271 84 r globaltempo_ms;
+#X floatatom 271 107 5 0 0 0 - - -;
+#X obj 220 151 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 90 242 + 1;
+#X obj 33 124 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 31 38 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 59 18 r metrostart;
+#X floatatom 91 173 1 0 0 0 - - -;
+#X obj 59 201 spigot;
+#X obj 220 171 t b b;
+#X obj 33 59 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 59 42 route stop;
+#X obj 59 147 t 0;
+#X obj 116 67 t b b b;
+#X obj 181 68 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 122 147 f 1;
+#X obj 247 195 s beatbng;
+#X obj 220 20 tgl 15 0 empty empty start/stop 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 220 40 select 0;
+#X msg 220 64 stop;
+#X obj 59 65 t b b b;
+#X msg 98 95 stop;
+#X connect 0 0 3 1;
+#X connect 2 0 8 0;
+#X connect 3 0 4 0;
+#X connect 3 0 9 0;
+#X connect 4 0 5 0;
+#X connect 5 0 1 0;
+#X connect 6 0 7 0;
+#X connect 7 0 2 1;
+#X connect 8 0 15 0;
+#X connect 9 0 3 1;
+#X connect 12 0 11 0;
+#X connect 12 0 17 0;
+#X connect 13 0 14 1;
+#X connect 14 0 3 0;
+#X connect 15 0 14 0;
+#X connect 15 1 22 0;
+#X connect 17 0 16 0;
+#X connect 17 0 26 0;
+#X connect 17 1 19 0;
+#X connect 17 1 20 0;
+#X connect 18 0 13 0;
+#X connect 19 0 21 0;
+#X connect 19 1 2 0;
+#X connect 19 2 0 0;
+#X connect 21 0 13 0;
+#X connect 23 0 24 0;
+#X connect 24 0 25 0;
+#X connect 24 1 2 0;
+#X connect 25 0 2 0;
+#X connect 26 0 18 0;
+#X connect 26 1 0 0;
+#X connect 26 2 27 0;
+#X connect 27 0 2 0;
+#X coords 0 368 1 367 85 30 0;

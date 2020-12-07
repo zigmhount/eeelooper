@@ -1,0 +1,18 @@
+#N canvas 240 77 450 300 10;
+#X obj 44 17 r save_param;
+#X obj 44 45 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 44 171 text set text-alltosave 1e+06;
+#X obj 65 94 inlet;
+#X obj 44 132 list;
+#X text 106 92 param name \, values;
+#X text 142 10 arg \$1 = row number;
+#X obj 44 65 t b b, f 33;
+#X obj 239 90 f \$1;
+#X connect 0 0 1 0;
+#X connect 1 0 7 0;
+#X connect 3 0 4 1;
+#X connect 4 0 2 0;
+#X connect 7 0 4 0;
+#X connect 7 1 8 0;
+#X connect 8 0 2 1;

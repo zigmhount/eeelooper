@@ -1,0 +1,60 @@
+#N canvas 317 69 450 401 10;
+#X obj 30 13 notein 1;
+#X obj 30 75 route 98;
+#X obj 34 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 31 117 select 127 0, f 23;
+#X floatatom 30 98 5 0 0 0 - - -;
+#X obj 30 36 pack f f;
+#X obj 96 140 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 305 157 bng 15 250 50 0 \$0bng89-s \$0bng89-r Scene8 17 7 0
+10 -262144 -1 -1;
+#X obj 305 180 bng 15 250 50 0 empty empty SHIFT 17 7 0 10 -262144
+-1 -1;
+#X obj 129 28 loadbang;
+#X obj 129 55 f \$0;
+#X obj 34 182 t f f f f;
+#X obj 33 162 f;
+#X obj 95 161 f;
+#X obj 95 184 t f f f;
+#X obj 131 8 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 305 140 bng 15 250 50 0 \$0bng88-s \$0bng88-r Scene7 17 7 0
+10 -262144 -1 -1;
+#X obj 305 106 bng 15 250 50 0 \$0bng86-s \$0bng86-r Scene5 17 7 0
+10 -262144 -1 -1;
+#X obj 305 123 bng 15 250 50 0 \$0bng87-s \$0bng87-r Scene6 17 7 0
+10 -262144 -1 -1;
+#X obj 305 89 bng 15 250 50 0 \$0bng85-s \$0bng85-r Scene4 17 7 0 10
+-262144 -1 -1;
+#X obj 305 72 bng 15 250 50 0 \$0bng84-s \$0bng84-r Scene3 17 7 0 10
+-262144 -1 -1;
+#X obj 305 38 bng 15 250 50 0 \$0bng82-s \$0bng82-r Scene1 17 7 0 10
+-262144 -1 -1;
+#X obj 305 55 bng 15 250 50 0 \$0bng83-s \$0bng83-r Scene2 17 7 0 10
+-262144 -1 -1;
+#X msg 238 227 \; \$1bng89-r label Scene8 \; \$1bng88-r label Scene7
+\; \$1bng87-r label Scene6 \; \$1bng86-r label Scene5 \; \$1bng85-r
+label Scene4 \; \$1bng84-r label Scene3 \; \$1bng83-r label Scene2
+\; \$1bng82-r label Scene1, f 24;
+#X msg 35 212 \; \$1bng89-r label Drums_mixer \; \$1bng88-r label Tap_tempo
+\; \$1bng82-r label Play/Stop \; \$1bng87-r label Metronome \;;
+#X connect 0 0 5 0;
+#X connect 0 1 5 1;
+#X connect 1 0 4 0;
+#X connect 2 0 12 0;
+#X connect 3 0 2 0;
+#X connect 3 1 6 0;
+#X connect 4 0 3 0;
+#X connect 5 0 1 0;
+#X connect 6 0 13 0;
+#X connect 9 0 10 0;
+#X connect 10 0 12 1;
+#X connect 10 0 13 1;
+#X connect 11 0 24 0;
+#X connect 12 0 11 0;
+#X connect 13 0 14 0;
+#X connect 14 0 23 0;
+#X connect 15 0 10 0;
+#X coords 0 -1 1 1 85 200 1 300 20;
