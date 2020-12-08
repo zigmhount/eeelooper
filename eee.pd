@@ -171,7 +171,7 @@
 #X coords 0 -1 1 1 19 64 2 221 133;
 #X restore 20 180 pd mixer_stereo;
 #X text 16 326 master;
-#N canvas 0 50 796 380 mixer_stereo 0;
+#N canvas 275 57 796 380 mixer_stereo 0;
 #X obj 47 13 ctlin;
 #X floatatom 92 37 4 0 0 0 - - -;
 #X obj 47 59 pack f f;
@@ -189,7 +189,7 @@
 #X msg 143 36 bang;
 #X obj 219 50 freeverb~;
 #X obj 262 205 hsl 26 15 0 1 0 1 empty empty revW 2 7 0 10 -262144
--1 -1 750 1;
+-1 -1 350 1;
 #X msg 326 221 wet \$1;
 #X msg 325 241 dry \$1;
 #X msg 325 260 roomsize \$1;
@@ -199,9 +199,9 @@
 #X floatatom 259 249 5 0 0 0 - - -;
 #X msg 530 143 500;
 #X obj 262 220 hsl 26 15 0 1 0 1 empty empty revD 2 7 0 10 -262144
--1 -1 1250 1;
+-1 -1 2050 1;
 #X obj 262 235 hsl 26 15 0 1 0 1 empty empty Room 2 7 0 10 -262144
--1 -1 2125 1;
+-1 -1 925 1;
 #X msg 536 81 0.5;
 #X obj 244 251 tgl 15 1 empty empty D 3 7 0 10 -262144 -1 -1 0 1;
 #N canvas 346 141 450 300 delay 0;
@@ -241,7 +241,7 @@
 ;
 #X obj 37 269 s vumeter_all;
 #X msg 326 199 bypass \$1;
-#X obj 244 205 tgl 15 0 empty empty r 4 7 0 10 -262144 -1 -1 0 1;
+#X obj 244 205 tgl 15 0 empty empty r 4 7 0 10 -262144 -1 -1 1 1;
 #X msg 174 61 0;
 #X obj 327 174 == 0;
 #X obj 476 334 save_param 1;
@@ -295,7 +295,7 @@
 #X connect 39 0 37 0;
 #X connect 40 0 38 0;
 #X coords 0 -1 1 1 102 66 2 190 202;
-#X restore 60 304 pd mixer_stereo;
+#X restore 61 300 pd mixer_stereo;
 #N canvas 75 140 654 300 mixer_stereo 0;
 #X obj 97 16 ctlin;
 #X floatatom 142 40 4 0 0 0 - - -;
@@ -747,7 +747,7 @@
 #X connect 88 0 81 0;
 #X coords 0 -1 1 1 160 38 2 36 106;
 #X restore 20 141 pd sampler;
-#X obj 230 356 switch~;
+#X obj 230 342 switch~;
 #N canvas 4 57 778 382 apc_leds 0;
 #X text 14 21 0 to 64;
 #X text 9 45 64 to 71;
@@ -981,7 +981,7 @@ the whole matrices of buttons every beat, f 22;
 #X connect 6 0 0 0;
 #X coords 0 -1 1 1 15 22 2 30 70;
 #X restore 164 111 pd monopan;
-#N canvas 110 214 287 232 arraybuttons 1;
+#N canvas 414 156 287 232 arraybuttons 1;
 #X obj 31 31 cnv 15 18 132 empty empty empty 20 12 0 14 -258113 -66577
 0;
 #X obj 50 31 cnv 15 18 132 empty empty empty 20 12 0 14 -260097 -66577
@@ -1063,7 +1063,7 @@ the whole matrices of buttons every beat, f 22;
 #X obj 146 34 rec_stereo 62;
 #X obj 165 34 rec_stereo 63;
 #X coords 0 -1 1 1 153 134 2 30 30;
-#X restore 230 132 pd arraybuttons;
+#X restore 316 121 pd arraybuttons;
 #N canvas 36 57 705 392 matrix 0;
 #X obj 288 3 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -2038,6 +2038,7 @@ the whole matrices of buttons every beat, f 22;
 #X connect 11 0 10 1;
 #X coords 0 -1 1 1 15 23 2 30 69;
 #X restore 125 268 pd stereopan;
+#X obj 20 263 sidechain_vol;
 #X connect 0 0 2 0;
 #X connect 0 1 2 1;
 #X connect 0 2 2 2;
@@ -2055,8 +2056,8 @@ the whole matrices of buttons every beat, f 22;
 #X connect 2 2 14 0;
 #X connect 2 3 14 0;
 #X connect 2 4 9 14;
-#X connect 3 0 5 0;
-#X connect 3 1 5 1;
+#X connect 3 0 36 0;
+#X connect 3 1 36 1;
 #X connect 5 0 27 0;
 #X connect 5 0 28 0;
 #X connect 5 1 27 1;
@@ -2080,6 +2081,7 @@ the whole matrices of buttons every beat, f 22;
 #X connect 9 13 17 1;
 #X connect 9 14 18 0;
 #X connect 9 15 18 1;
+#X connect 13 0 36 2;
 #X connect 13 0 5 0;
 #X connect 13 1 5 1;
 #X connect 14 0 9 12;
@@ -2099,3 +2101,5 @@ the whole matrices of buttons every beat, f 22;
 #X connect 34 1 35 1;
 #X connect 35 0 5 0;
 #X connect 35 1 5 1;
+#X connect 36 0 5 0;
+#X connect 36 1 5 1;
