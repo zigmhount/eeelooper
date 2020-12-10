@@ -4,4 +4,4 @@ Similar to [pdlooper](https://github.com/zigmhount/pdlooper), but written in van
 
 Designed to be used together with audio input channels, a midi pad to load samples in a drumkit patch, and a midi control surface with 64 buttons and 9 faders, with no external software except Jack.
 
-![Main patch](images/2020-11-25-main.png)
+![Main patch](images/current_main.png)
