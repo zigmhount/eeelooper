@@ -45,8 +45,8 @@
 #X obj 257 277 array define track\$0 768000;
 #X obj 421 65 f \$0;
 #X msg 421 88 \; track\$1 const 0;
-#N canvas 71 139 450 339 trig_rec 1;
-#N canvas -13 57 674 398 rec 0;
+#N canvas 71 139 450 339 trig_rec 0;
+#N canvas 106 90 674 398 rec 0;
 #X obj 43 23 inlet~;
 #X obj 45 313 *~;
 #X obj 137 23 inlet;
@@ -101,6 +101,8 @@
 #X text 127 343 record also the ramp from the switch?;
 #X floatatom 439 102 5 0 0 0 - - -;
 #X obj 406 123 spigot;
+#X obj 29 122 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X connect 0 0 1 0;
 #X connect 1 0 27 0;
 #X connect 2 0 46 0;
@@ -155,6 +157,7 @@
 #X connect 46 1 4 0;
 #X connect 48 0 49 1;
 #X connect 49 0 11 1;
+#X connect 50 0 23 0;
 #X coords 0 398 1 397 72 30 0;
 #X restore 109 314 pd rec;
 #X text 166 301 start recording on next beat 0 \, stop on next beat
@@ -193,17 +196,20 @@
 #X obj 108 336 change;
 #X obj 213 260 spigot;
 #X floatatom 247 235 1 0 0 0 - - -;
-#X msg 352 316 \; track\$1 const 0, f 7;
-#X obj 352 289 f \$0;
-#X obj 351 268 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X msg 351 335 \; track\$1 const 0, f 7;
+#X obj 351 308 f \$0;
+#X obj 350 287 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 313 201 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 332 201 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 332 201 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 313 221 +;
 #X obj 351 243 == 2;
 #X floatatom 313 244 5 0 0 0 - - -;
+#X obj 351 265 sel 1;
+#X text 410 310 this should ot be ecessary if I pla oly tll a know
+sample umber, f 13;
 #X connect 0 0 31 0;
 #X connect 2 0 5 0;
 #X connect 4 0 6 0;
@@ -245,13 +251,13 @@
 #X connect 31 0 8 0;
 #X connect 32 0 28 0;
 #X connect 33 0 32 1;
-#X connect 35 0 34 0;
 #X connect 36 0 35 0;
 #X connect 37 0 39 0;
 #X connect 38 0 39 1;
 #X connect 39 0 40 0;
 #X connect 39 0 41 0;
-#X connect 40 0 36 0;
+#X connect 40 0 42 0;
+#X connect 42 0 36 0;
 #X coords 0 -1 1 1 86 19 1 40 357;
 #X restore 30 182 pd trig_rec;
 #N canvas 304 71 395 404 trig_play 0;
@@ -268,7 +274,7 @@
 #X obj 324 368 switch~;
 #X obj 325 317 dsp_switch_vanilla;
 #X obj 462 336 tgl 15 0 empty empty playing -43 7 0 10 -262144 -258113
--1 0 1;
+-1 1 1;
 #X obj 13 37 r \$0-length;
 #X floatatom 13 61 7 0 0 0 - - -;
 #X obj 189 379 outlet~;
@@ -419,7 +425,7 @@
 #X obj 55 115 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X msg 85 70 1;
-#X obj 158 350 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 158 350 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 121 230 list;
 #X obj 120 253 list trim;
@@ -532,7 +538,7 @@
 #X obj 27 137 == 0;
 #X obj 27 160 select 1;
 #X obj 69 187 f;
-#X obj 69 215 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 69 215 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 2
 1;
 #X obj 69 235 outlet;
 #X obj 27 22 r apc_leds_m1;
@@ -547,7 +553,7 @@
 #X connect 7 0 8 0;
 #X connect 9 0 0 0;
 #X restore 417 25 pd input_not_muted;
-#X obj 417 49 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 417 49 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 2
 1;
 #X text 532 21 use this to define whether the butto is allowed to send
 A \, P \, L, f 19;
